@@ -1,4 +1,4 @@
-package spring_introductioin;
+package spring_introduction;
 
 public class Dog implements Pet{
     @Override

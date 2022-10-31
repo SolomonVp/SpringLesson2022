@@ -1,4 +1,4 @@
-package spring_introductioin;
+package spring_introduction;
 
 public class Cat implements Pet{
     @Override
