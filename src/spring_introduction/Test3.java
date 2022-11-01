@@ -15,6 +15,8 @@ public class Test3 {
 //        Person person = new Person(pet);
 
         person.callYourPet();
+        System.out.println("Фамилия: " + person.getSurname() + ".\nВозраст: " + person.getAge());
+
         context.close();
     }
 }
