@@ -5,10 +5,6 @@ public class Person {
     private String surname;
     private int age;
 
-//    public Person(Pet pet) {
-//        System.out.println("Person bean is created!");
-//        this.pet = pet;
-//    }
 
         public Person() {
         System.out.println("--- Person bean is created!");
@@ -20,21 +16,20 @@ public class Person {
     }
 
     public String getSurname() {
-        System.out.println("--- Class person: set surName");
         return surname;
     }
 
     public void setSurname(String surname) {
+        System.out.println("--- Class person: set surName");
         this.surname = surname;
     }
 
     public int getAge() {
-        System.out.println("--- Class person: set setAge");
         return age;
     }
 
     public void setAge(int age) {
-
+        System.out.println("--- Class person: set setAge");
             this.age = age;
     }
 
