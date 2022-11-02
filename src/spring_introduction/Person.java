@@ -16,7 +16,7 @@ public class Person {
 //    }
 
     public Person() {
-        System.out.println("--- Person bean is created!");
+        System.out.println("--- Person bean is created! ---");
     }
 
     @Autowired
@@ -30,7 +30,7 @@ public class Person {
     }
 
     public void setSurname(String surname) {
-        System.out.println("--- Class person: set surName");
+        System.out.println("--- Class person: set surName ---");
         this.surname = surname;
     }
 
@@ -39,7 +39,7 @@ public class Person {
     }
 
     public void setAge(int age) {
-        System.out.println("--- Class person: set setAge");
+        System.out.println("--- Class person: set setAge ---");
         this.age = age;
     }
 
