@@ -1,17 +1,29 @@
 package spring_introduction;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("personBean")
 public class Person {
     private Pet pet;
     private String surname;
     private int age;
 
 
-        public Person() {
-        System.out.println("--- Person bean is created!");
+
+
+    //    public Person() {
+//        System.out.println("--- Person bean is created!");
+//    }
+
+//    @Autowired
+    public Person(Pet pet) {
+        System.out.println("--- Person bean is created! ---");
+        this.pet = pet;
     }
 
     public void setPet(Pet pet) {
-        System.out.println("--- Class person : set Pet");
+        System.out.println("--- Class person : set Pet ---");
         this.pet = pet;
     }
 
@@ -30,7 +42,7 @@ public class Person {
 
     public void setAge(int age) {
         System.out.println("--- Class person: set setAge");
-            this.age = age;
+        this.age = age;
     }
 
     public void callYourPet() {
