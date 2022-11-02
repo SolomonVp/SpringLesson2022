@@ -7,7 +7,7 @@ public class Cat implements Pet{
 
 
     public Cat() {
-        System.out.println("\n--- Cat bean is created!");
+        System.out.println("\n--- Cat bean is created! ---");
     }
 
     @Override
