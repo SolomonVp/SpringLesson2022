@@ -18,10 +18,11 @@ public class Test1 {
 
         try {
             Session session = factory.getCurrentSession();
-            Employee employee = new Employee("Zina", "Oleshkina", "IT", 500);
+            Employee employee = new Employee("Petr", "Petrov", "Sales", 700);
             session.beginTransaction();
             session.save(employee);
             session.getTransaction().commit();
+            System.out.println("Done!");
         } catch (HibernateException e) {
             throw new RuntimeException(e);
         } finally {
