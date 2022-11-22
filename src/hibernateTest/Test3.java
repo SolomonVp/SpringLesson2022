@@ -1,15 +1,14 @@
 package hibernateTest;
 
-
-
 import hibernateTest.entity.Employee;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import java.util.List;
 
-public class Test1 {
+public class Test3 {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
@@ -18,10 +17,21 @@ public class Test1 {
 
         try {
             Session session = factory.getCurrentSession();
-            Employee employee = new Employee("Alex", "Ivanov", "IT", 600);
             session.beginTransaction();
-            session.save(employee);
+
+//            List<Employee> emps = session.createQuery("from Employee")
+//                            .getResultList();
+
+            List<Employee> emps = session.createQuery("from Employee where name = 'Olga' AND salary > 800")
+                            .getResultList();
+
+
+            for (Employee e : emps) {
+                System.out.println(e);
+            }
+
             session.getTransaction().commit();
+
             System.out.println("Done!");
         } catch (HibernateException e) {
             throw new RuntimeException(e);
